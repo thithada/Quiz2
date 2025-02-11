@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-11T10:09:40.283067" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="d:\Tomas\robot\test.robot">
+<test id="s1-t1" name="Contact Form Test" line="68">
+<kw name="Open Browser And Navigate">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:40.476395" level="INFO">Opening browser 'chrome' to base url 'http://automationexercise.com'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-11T10:09:40.476090" elapsed="4.216156"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-02-11T10:09:44.692609" elapsed="0.030195"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:40.475381" elapsed="4.248362"/>
+</kw>
+<kw name="Verify Homepage">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Home')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:09:44.726722" elapsed="0.029783"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:44.777575" level="INFO">Current page contains text 'Automation Exercise'.</msg>
+<arg>Automation Exercise</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-11T10:09:44.757349" elapsed="0.020487"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:44.725603" elapsed="0.052364"/>
+</kw>
+<kw name="Click Contact Us Button">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:44.779259" level="INFO">Clicking element 'xpath://a[contains(text(),'Contact us')]'.</msg>
+<arg>xpath://a[contains(text(),'Contact us')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:44.778973" elapsed="1.349250"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:44.778556" elapsed="1.349943"/>
+</kw>
+<kw name="Verify Get In Touch Section">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://h2[contains(text(),'Get In Touch')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.129703" elapsed="0.016657"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.154309" level="INFO">Element 'xpath://h2[contains(text(),'Get In Touch')]' is displayed.</msg>
+<arg>xpath://h2[contains(text(),'Get In Touch')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.146567" elapsed="0.007919"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:46.129333" elapsed="0.025259"/>
+</kw>
+<kw name="Fill Contact Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.155504" level="INFO">Typing text 'Test User' into text field 'name:name'.</msg>
+<arg>name:name</arg>
+<arg>${NAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.155234" elapsed="0.082114"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.238035" level="INFO">Typing text 'test@example.com' into text field 'name:email'.</msg>
+<arg>name:email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.237651" elapsed="0.083840"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.322038" level="INFO">Typing text 'Test Subject' into text field 'name:subject'.</msg>
+<arg>name:subject</arg>
+<arg>${SUBJECT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.321739" elapsed="0.054917"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.377283" level="INFO">Typing text 'This is a test message' into text field 'name:message'.</msg>
+<arg>name:message</arg>
+<arg>${MESSAGE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.377000" elapsed="0.086282"/>
+</kw>
+<kw name="Create And Get Test File">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2025-02-11T10:09:46.464283" level="INFO" html="true">Created directory '&lt;a href="file://D:\Tomas\test_files"&gt;D:\Tomas\test_files&lt;/a&gt;'.</msg>
+<arg>${EXECDIR}${/}test_files</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.463795" elapsed="0.000717"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-11T10:09:46.464917" level="INFO">${file_path} = D:\Tomas\test_files\test.txt</msg>
+<var>${file_path}</var>
+<arg>${EXECDIR}${/}test_files${/}test.txt</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.464662" elapsed="0.000362"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2025-02-11T10:09:46.465713" level="INFO" html="true">Created file '&lt;a href="file://D:\Tomas\test_files\test.txt"&gt;D:\Tomas\test_files\test.txt&lt;/a&gt;'.</msg>
+<arg>${file_path}</arg>
+<arg>This is test file content</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.465138" elapsed="0.000755"/>
+</kw>
+<return>
+<value>${file_path}</value>
+<status status="PASS" start="2025-02-11T10:09:46.466026" elapsed="0.000188"/>
+</return>
+<msg time="2025-02-11T10:09:46.466431" level="INFO">${test_file} = D:\Tomas\test_files\test.txt</msg>
+<var>${test_file}</var>
+<status status="PASS" start="2025-02-11T10:09:46.463550" elapsed="0.002996"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.466958" level="INFO">Sending D:\Tomas\test_files\test.txt to browser.</msg>
+<arg>name:upload_file</arg>
+<arg>${test_file}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.466697" elapsed="0.026092"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:46.154953" elapsed="0.338126"/>
+</kw>
+<kw name="Submit Form And Handle Alert">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.494808" level="INFO">Clicking button 'name:submit'.</msg>
+<arg>name:submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.494478" elapsed="0.062136"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.557481" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<arg>accept</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.557164" elapsed="0.006492"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:46.493949" elapsed="0.069926"/>
+</kw>
+<kw name="Verify Success Message">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://div[contains(text(),'Success! Your details have been submitted successfully.')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.565828" elapsed="0.021005"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.602270" level="INFO">Element 'xpath://div[contains(text(),'Success! Your details have been submitted successfully.')]' is displayed.</msg>
+<arg>xpath://div[contains(text(),'Success! Your details have been submitted successfully.')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.587296" elapsed="0.015360"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:46.565071" elapsed="0.037878"/>
+</kw>
+<kw name="Return To Homepage And Verify">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:46.604667" level="INFO">Clicking element 'xpath://a[contains(text(),'Home')]'.</msg>
+<arg>xpath://a[contains(text(),'Home')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-11T10:09:46.604455" elapsed="1.825720"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'Home')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-11T10:09:48.430689" elapsed="0.023232"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-11T10:09:48.466262" level="INFO">Current page contains text 'Automation Exercise'.</msg>
+<arg>Automation Exercise</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-11T10:09:48.454131" elapsed="0.012694"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:46.604007" elapsed="1.863069"/>
+</kw>
+<status status="PASS" start="2025-02-11T10:09:40.474662" elapsed="7.993341"/>
+</test>
+<status status="PASS" start="2025-02-11T10:09:40.286389" elapsed="8.183523"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="1" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-11T10:09:40.269986" level="WARN">Error in file 'd:\Tomas\robot\test.robot' on line 49: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
